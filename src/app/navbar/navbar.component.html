@@ -1,0 +1,68 @@
+
+<nav >
+<mat-toolbar class="nav">
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+   <div fxLayout="row">
+     <button mat-button>
+      <mat-icon>favorite_border</mat-icon>
+       <span class="logo">Reastaurants!!</span>
+     </button>
+     <div *ngIf="!deviceXs"  fxLayout="row">
+      
+      <button mat-button routerLink="" class="home"><mat-icon class="ho">home</mat-icon>Home</button>
+      <button mat-button  routerLink="/contact" class="home"><mat-icon class="ho">contacts</mat-icon>Contact-Us</button>
+      <button mat-button routerLink="/listuser" class="home"><mat-icon class="ho">restaurant</mat-icon>ReastaurentList</button>
+     </div>
+
+   </div>
+   <div style="margin-right: 20px;">
+      <button mat-icon-button routerLink="/login">
+        <mat-icon *ngIf="deviceXs">login</mat-icon>
+        <span  *ngIf="!deviceXs" class="home"><mat-icon class="ho">manage_accounts</mat-icon>Login</span>
+      </button>
+   </div>
+   
+  </mat-toolbar-row>
+
+  <mat-toolbar-row  *ngIf="deviceXs" fxLayoutAlign="space-between end">
+    <div  *ngIf="deviceXs">
+      
+      <button mat-button routerLink="" class="home"><mat-icon class="ho">home</mat-icon>Home</button>
+      <button mat-button routerLink="/contact" class="home"><mat-icon class="ho">contacts</mat-icon>Contact-Us</button>
+      <button mat-button routerLink="/listuser" class="home"><mat-icon class="ho">restaurant</mat-icon>ReastaurentList</button>
+     </div>
+     
+  </mat-toolbar-row>
+</mat-toolbar>
+</nav>
+
+
+
+ <!-- <mat-toolbar color="primary" class="sticky">
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div fxLayout="row">
+      <button mat-button>
+        <mat-icon>home</mat-icon>
+        <span class="logo">ENotes</span>
+      </button>
+      <div *ngIf="!deviceXs" fxLayout="row">
+        <button mat-button routerLink="/user-login/main-home">Home</button>
+        <button mat-button routerLink="/user-register/contact_us">Contact us</button>
+      </div>
+    </div>
+    <div>
+      <div *ngIf="!deviceXs" mat-button fxLayoutAlign="end">
+        <button mat-button routerLink="/user-login/login">Login</button>
+        <button mat-button routerLink="/user-register/register">Register</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
+    <button mat-button routerLink="/user-login/main-home">Home</button>
+    <button mat-button routerLink="/user-register/contact_us">Contact us</button>
+    <button mat-button routerLink="/user-login/login">Login</button>
+    <button mat-button routerLink="/user-register/register">Register</button>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
+ 

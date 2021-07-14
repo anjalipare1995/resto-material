@@ -1,0 +1,44 @@
+.img{
+   
+    height: 650px;
+    left: 0px;
+    right: 0px;
+}
+
+.title
+{
+   margin-top: 40px;
+   font-size: 40px;
+   font-weight: bolder;
+ flex-wrap:wrap; 
+   color:burlywood;
+   font-family: cursive;
+   
+  
+  
+}
+
+mat-card
+{
+    margin-top: 40px;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+mat-label
+{
+    font-weight: bolder;
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+button
+{
+  
+    margin-top: 35px;
+     padding: 10px;
+     background-color: blueviolet;
+     color: white;
+     font-weight: bolder;
+     font-size: large;
+     font-family: sans-serif;
+}

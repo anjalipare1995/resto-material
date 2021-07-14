@@ -1,0 +1,87 @@
+
+<body class="img" background="..\assets\login1.jpg" >
+  
+<app-navbar [deviceXs]="deviceXs"></app-navbar>
+
+
+
+<!-- <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Invalid</strong> Username or Password Try again!!!
+    <button  (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>  -->
+  <!-- fxFlex="30%" fxFlex.xs=100% fxFlex.sm=50% fxFlex.md=30%  -->
+
+  <div fxLayout="row" fxLayout.xs="column" >
+    <div fxFlex="100%" fxFlex.xs="100%" fxLayoutAlign="center center" class="login1" >
+      <mat-card class="bgcolor" fxLayout="column" fxLayoutAlign="center center" 
+     >
+  <form [formGroup]="formLogin" (ngSubmit)="login()">  
+  <mat-card-header>
+   
+   <mat-label style= "font-size:3vw; text-align: center;color: blue; font-weight:bold; 
+   padding-bottom: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    Login page</mat-label>
+   
+  </mat-card-header>
+  <mat-card-content>
+    {{msg}}
+    <p>
+    <mat-form-field fxLayout="column" >
+      <mat-label >UserName <mat-icon>account_circle</mat-icon></mat-label>
+      
+      <input matInput type="text" formControlName="username" placeholder="Enter UserName">
+      <mat-hint>Username required</mat-hint>
+    </mat-form-field>
+    </p>
+  <p>
+    <mat-form-field fxLayout="column">
+      <mat-label >Password <mat-icon>lock</mat-icon></mat-label>
+      <input matInput formControlName="password" type="password" placeholder="Enter Password">
+      <mat-hint>Password required</mat-hint>
+    </mat-form-field>
+    </p>
+   
+    <button [disabled]=!formLogin.valid mat-raised-button type="submit" >Login</button>
+  </mat-card-content>
+  </form>
+  
+</mat-card>
+</div>
+</div>  
+</body>
+
+
+<!-- <div class=" body1 container-fluid mt-5">
+<div class="row">
+    <div class="col-md-4 offset-md-4 ">
+        <div class="card mt-4">
+            <div class="card-header text-center text-white bg-primary">
+
+               <h1>Login Here</h1>
+            </div>
+            <div class="card-body">
+                <form #loginForm="ngForm" (ngSubmit)="login();loginForm.resetForm()">
+                   <span class="alert1">{{msg}}</span> 
+                    <div class="form-group">
+                        <label>UserName</label>
+                    
+                        <input type="text" required  name="username" class="form-control" placeholder="Enter Username" 
+                            [(ngModel)]="formlogin.username" > 
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" required name="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Password" [(ngModel)]="formlogin.password">  
+                            
+                    
+                    </div>
+                    <div class="text-center mt-4">
+                         click for <a routerLink="/register">Registration</a>
+                        <br> 
+- 
+                        <button type="submit" [disabled]=!loginForm.form.valid  class="btn btn-primary mt-3">Login</button>
+                     
+                    </div>  
+                 -->

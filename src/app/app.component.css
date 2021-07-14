@@ -1,0 +1,30 @@
+ footer{
+    padding: 10px;
+        background-color:lightcoral;
+       position:relative;
+     
+      
+       
+        margin-top: 20px;
+        /* bottom: 0; */
+        color: black;
+        font: large;
+    }
+
+
+   
+    .footerdiv
+    {
+        line-height: 1.5em;
+    }
+
+   
+    .head
+    {
+        font: bolder;
+        font-size: large;
+        font-size: 15px;
+        color:blueviolet;
+        
+        
+    }

@@ -1,0 +1,122 @@
+<app-navbar2 [deviceXs]="deviceXs"></app-navbar2>
+
+<h1><mat-icon>tapas</mat-icon>
+  Restaurant list <mat-icon>ramen_dining</mat-icon></h1>    
+<div class="example-container mat-elevation-z8">
+
+<mat-table #table  [dataSource]="dataSource">
+
+
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <span class="mobile-label">Id:</span>
+      
+{{element.id}}
+</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <span class="mobile-label">name :</span>
+       {{element.name}}
+      </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> Email</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <span class="mobile-label">email:</span>
+       {{element.email}}
+      </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="address">
+    <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <span class="mobile-label">address:</span>
+       {{element.address}}
+       </mat-cell>
+  </ng-container>
+   <ng-container matColumnDef="date">
+    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <span class="mobile-label">date:</span>
+       {{element.date}}
+       </mat-cell>
+  </ng-container>
+  
+
+
+  <ng-container matColumnDef="Actions" class="act">
+    <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+
+      <a routerLink="/update/{{element.id}}" color="primary"><mat-icon>edit</mat-icon></a>
+
+
+      <button mat-icon-button color="warn" (click)="deleteResto(element.id)"><mat-icon>delete</mat-icon></button>
+
+    </mat-cell>
+  </ng-container>
+
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+
+<mat-paginator [length]="100"
+[pageSize]="10" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+</mat-paginator>
+
+
+</div>
+
+
+
+
+ <!-- <div class="container" style="padding-top:10px">
+<table class="table table-striped table-dark">
+
+  <thead>
+
+    <tr>
+
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Operation</th>
+      <th scope="col">Date</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+
+    <tr *ngFor="let item of collection">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.address}}</td>
+      <td>
+        <i (click)="deleteResto(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>
+        &nbsp;&nbsp;&nbsp;
+
+        <a routerLink="/update/{{item.id}}">
+        <i class="fa fa-edit" style="font-size:20px;color:blue;"></i>
+  </a>
+      </td>
+      <td>{{item.date | date:'EEE dd-MMM-yyyy'}}</td>    
+    
+    </tr>
+
+  </tbody>
+</table>
+</div>  -->

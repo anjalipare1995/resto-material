@@ -1,0 +1,82 @@
+<div>
+<body background='..\assets\mobile2.jpg' class="img">
+    
+  <app-navbar2 [deviceXs]="deviceXs"></app-navbar2>
+
+<label  class="title"  fxLayoutAlign="center center" style="font-size:4vw">Add New Restaurant</label>
+
+   <div  fxLayoutAlign="center center" > 
+       
+    
+     <mat-card >
+      <!-- fxFlex="30%"  fxFlex.xs=80% fxFlex.sm=50% fxFlex.md=30%
+        -->
+        <mat-card-content>  
+      <form  [formGroup]="AddResto" (ngSubmit)="collectResto()"  fxLayout="column">
+        <mat-form-field>
+          <mat-label>Restaurant Name <mat-icon>drive_file_rename_outline</mat-icon></mat-label>
+          <input matInput  formControlName="name" type="text" placeholder="Enter Restaurant Name" >
+          <mat-hint>Name required</mat-hint>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Address <mat-icon>edit_location_alt</mat-icon></mat-label>
+          <input matInput type="text"  formControlName="address" placeholder="Enter Restaurant Address" >
+          <mat-hint>Address required</mat-hint>
+
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Email Id  <mat-icon>mail</mat-icon></mat-label>
+          <input matInput  type="email" email formControlName="email" placeholder="Enter Restaurant Email-Id" >
+          <mat-hint>Email-Id required</mat-hint>
+        </mat-form-field>
+        
+         <button [disabled]="!AddResto.valid" mat-raised-button type="submit">Submit</button>   
+
+      </form>
+      </mat-card-content>
+      
+     </mat-card>
+   </div>
+</body>
+</div>
+
+<!-- <div class="container">
+  <div class="col-md-6 offset-md-3">
+<h1 class="text-center">Add new Restaurant</h1>
+
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+   <strong>success</strong> Your data has been entered successfully!!
+   <button  (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+<div class="container-fluid">
+ <form [formGroup]="AddResto" (ngSubmit)="collectResto()">
+  <div  class="form-group">
+    <label >Name</label>
+    <input type="text" required class="form-control" placeholder="Enter Name" formControlName="name">
+   </div>
+   <input type="hidden" class="form-control" placeholder="Enter Name" formControlName="date">
+   <div  class="form-group">
+    <label >Email Id</label>
+    <input type="email"  required class="form-control" placeholder="Enter Email" formControlName="email">
+   </div>
+   <div  class="form-group">
+    <label >Address</label>
+    <input type="text" required  class="form-control" placeholder="Enter Address" formControlName="address">
+   </div> -->
+   <!-- <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="Date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> -->
+  
+ <!-- <div class="text-center">
+  <button type="submit" [disabled]="!AddResto.valid" class="btn btn-primary ">Submit</button>
+  </div>
+</form>
+</div>
+</div> -->

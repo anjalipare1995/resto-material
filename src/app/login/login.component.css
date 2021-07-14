@@ -1,0 +1,75 @@
+/* .alert1
+{
+    color: red;
+    margin-bottom: auto;
+} */
+
+
+
+
+
+
+.img{
+ 
+  height: 570px;
+  left: 0px;
+  right: 0px;
+}
+
+/* .maindiv 
+{
+  padding: 1px;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  width: 20%;
+  display: flexbox;
+  margin-left: 40%;
+  margin-top: 50px;
+  
+} */
+/* .login
+{
+  color:chocolate;
+  font-size: 40px;
+  font-weight: 500;
+  margin-left: 30px;
+  border-bottom: 1px solid chocolate;
+} */
+
+.bgcolor
+{
+  background-color:lightpink;
+  /* border-radius: 50px; */
+}
+button
+{
+  text-align: center;
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  font-size: large;
+}   
+
+.login1
+{
+   padding: 60px; 
+  margin-top: 50px;
+  opacity: 0.8;
+  border-radius: 40px;
+  color: aqua;
+
+}
+
+mat-label
+{
+  font-weight: bolder;
+  font-size: medium;
+
+}
+
+
+
+
+
+
+  

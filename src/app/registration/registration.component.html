@@ -1,0 +1,135 @@
+
+<app-navbar></app-navbar>
+
+<!-- 
+{{regForm | json | lowercase}}  --> 
+<!-- <div class="container-fluid  mt-5">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 ">
+      <div class="card mt-4">
+        <div class="card-header text-center text-white bg-success">
+
+          <h3>Registration</h3>
+        </div>
+        <form #register="ngForm" (ngSubmit)="collection()">
+          
+          <div class="form-group">
+            <label>Name</label>
+            <input required #name="ngModel" 
+                  type="text" name="name" 
+                  class="form-control" 
+                  placeholder="Enter username" 
+                
+                  ([ngModel])="register.name">
+           <span *ngIf="name.touched" class="error">Name is invalid</span>
+          </div>
+
+            <div class="form-group">
+              <label>Email address</label>
+              <input required #email="ngModel" 
+                      type="email" email 
+                      name="email"
+                      class="form-control"
+                      placeholder="Enter email"
+                    
+                      ([ngModel])="register.email">
+            
+              <span *ngIf="email.invalid && email.touched" class="error">cEmail field is not valid</span>
+            </div>
+          
+            <div class="form-group">
+              <label>Password</label>
+              <input required #password="ngModel" minlength="3" maxlength="10" type="password" 
+              ngModel class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+            <span *ngIf="password.invalid && password.touched" class="error">password is not valid</span>
+            </div>
+        
+            <button [disabled]="register.invalid" type="submit" class="btn btn-primary">Submit</button>
+          
+              
+            
+            <div class="text-center mt-3">
+              Click here for <a routerLink="/login">Login</a>
+              <br>
+              <button type="submit" class="btn btn-success mt-3">Submit</button>
+          
+              
+            </div>
+          </form>
+          </div>
+          </div>
+          </div>
+        </div> -->
+      
+        
+          
+<div class="container-fluid  mt-5">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 ">
+      <div class="card mt-4">
+        <div class="card-header text-center text-white bg-success">
+         
+          <h3>Registration</h3>
+        </div>
+
+
+        <div class="card-body">
+          <form #registrationForm="ngForm" (ngSubmit)="collection(); registrationForm.resetForm()">
+            <div class="form-group">
+              <label> Enter Full Name</label>
+              <input type="text" required #name="ngModel"
+                     pattern="[a-zA-Z ]{2,30}"
+                     [class.is-invalid]="name.invalid && name.touched"
+                     class="form-control is-invalid" 
+                     [(ngModel)]="register.name" 
+                     name="fname" id="name">
+
+              <small class="text-danger" [class.d-none]="name.valid || name.untouched ">Name is Required</small>
+            </div>
+
+            <div class="form-group">
+              <label>Enter Email</label>
+              <input type="email" required #email="ngModel"
+                    email
+                     [class.is-invalid]="email.invalid && email.touched"
+                     class="form-control is-invalid" 
+                     [(ngModel)]="register.email" 
+                     id="exampleInputEmail1"  name="email">
+              <small class="text-danger" [class.d-none]="email.valid || email.untouched ">Enter correct Email-ID </small>
+            </div>
+
+            <div class="form-group">
+              <label>Enter Password</label>
+              <input type="password" required #password="ngModel"
+                     pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$"
+                     [class.is-invalid]="password.invalid && password.touched"
+                     class="form-control is-invalid"
+                     [(ngModel)]="register.password" 
+                      name="password">
+
+              <div *ngIf="password.errors && (password.invalid || password.touched)" >
+                  <small class="text-danger" 
+                      [class.d-none]="password.valid || password.untouched " 
+                      *ngIf="password.errors.required">
+                      Password is Required
+                  </small>
+                  <small class="text-danger" 
+                     *ngIf="password.errors.pattern">
+                     Password must contain minimum 8 characters including (1 lowercase,1 special character,1 numeric)
+                  </small>
+
+              </div>
+
+            </div>
+
+            <h6 class="text-center mt-2 mb-2">Already Registered <a routerLink="/login">Login here</a></h6>
+
+            <button [disabled]="registrationForm.form.invalid" type="submit" class="btn btn-primary badge-pill btn-block">
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

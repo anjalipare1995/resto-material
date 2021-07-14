@@ -1,0 +1,45 @@
+/* .navbar
+{
+background-color: blueviolet;
+}
+.nav-link
+{
+  font-size: large;
+  color: white;
+}
+a:hover {
+  background-color:black;
+  
+} */
+
+/* material */
+.logo
+{
+  padding: 5px;
+  font-size: xx-large;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+.nav{
+  background-color: blueviolet;
+  padding: 20px;
+  color: white;
+
+ position: static;
+ /* z-index: 50; */
+
+  
+}
+
+/* a:hover {
+  background-color:black;
+  
+} */
+.home
+{
+  font-size: 20px;
+  font: bolder;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.ho{
+font-size: 20px;
+}

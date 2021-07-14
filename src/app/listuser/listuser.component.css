@@ -1,0 +1,76 @@
+table {
+    width: 100%;
+    padding: 20px;
+  }
+  h1{
+  text-align: center;
+  border: 10px;
+  padding: 10px;
+  font-weight: bold;
+  color: maroon;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  }
+  mat-paginator 
+  {
+    background-color: silver;
+      font-weight: bold;
+      font-size: medium;
+  }
+  mat-header-cell
+  {
+      font-size: large;
+      font-weight: bolder;
+      background-color:silver;
+  }
+
+  mat-cell
+{
+       background-color: mintcream;
+}
+
+  .tableDesign
+  {
+    padding:20px;
+    background-color:antiquewhite;
+    font-size: large;
+    font-weight: 500;
+  }
+  
+  
+  
+   .example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .mobile-label {
+    display:flex;
+  }
+  
+  @media(max-width: 600px) {
+    .mobile-label {
+      width: 80px;
+      display: inline-block;
+          font-weight: bold;
+    }
+  
+    .mat-header-row {
+      display: none;
+    }
+  
+    .mat-row {
+      flex-direction: column;
+      align-items: start;
+      padding: 8px 24px;
+    }
+  }
+  

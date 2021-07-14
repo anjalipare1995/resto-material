@@ -1,0 +1,29 @@
+.color1
+{
+    background-color: grey;
+}
+
+
+.container
+{
+    font-size: xx-large;
+    padding: 20px;
+    text-align: center;
+    color:black;
+}
+.card
+{
+  padding: 2px;
+  block-size: auto;
+  
+}
+
+.example-card {
+width:100%
+}
+/* 
+.example-header-image {
+  background-image: url('src\assets\download (2).jpg');
+  background-size: cover;
+  display: flex;
+} */
